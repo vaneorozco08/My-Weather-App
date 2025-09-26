@@ -4,27 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tektur:wdth,wght@87.5,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="weather-app-info">
     <header>
         <form>
-            <input type="search" placeholder="Enter a city..." required />
-            <input type="submit" value="Search" />
+            <input class="weather-app-input" type="search" placeholder="Enter a city..." required />
+            <input class="weather-app-serch" type="submit" value="Search" />
         </form>
     </header>
-    <div>
+    <div class="weather-app-content">
+        <div>
         <h1>Medellín</h1>
         <p>
+            <div class="weather-app-date">
             Friday 11:44, overcast clouds 
             </br>
-            Humidity: 74%, Wind: 2.57km/h
+            Humidity: <strong>74%</strong>, Wind: <strong>2.57km/h</strong>
+            </div>
         </p>
     </div>
-    <div>    
-        ⛅ 14 °C
+    <div class="weather-app-temperature">  
+        <div class="weather-icon">⛅</div> 
+        <div class="weather-temperature">14</div> 
+        <div class="weather-celcius">°C </div>
+    </div>
     </div>
     <footer> Desing by 
-        <a href="https://github.com/vaneorozco08" target="_blank">Vanessa GO</a> 
+        <a href="https://github.com/vaneorozco08" target="_blank">Vanessa GO</a> is <a href=""></a>
     </footer>
+    </div>
 </body>
 </html>
