@@ -67,5 +67,11 @@ strong{
     line-height: 30px;
 }
 footer{
-    font-size: 15px;
+    font-size: 14px;
+    text-align: center;
+    color: rgba(39, 33, 66, 0.4);
+}
+a{
+    color: #885df1;
+    cursor: pointer;
 }
