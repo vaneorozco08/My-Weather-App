@@ -12,14 +12,14 @@
 <body>
     <div class="weather-app-info">
     <header>
-        <form>
-            <input class="weather-app-input" type="search" placeholder="Enter a city..." required />
-            <input class="weather-app-serch" type="submit" value="Search" />
+        <form id="search-form">
+            <input class="weather-app-input" id="search-input" type="search" placeholder="Enter a city..." required />
+            <input class="weather-app-serch"  type="submit" value="Search" />
         </form>
     </header>
     <div class="weather-app-content">
         <div>
-        <h1>Medellín</h1>
+        <h1 id="city">Medellín</h1>
         <p>
             <div class="weather-app-date">
             Friday 11:44, overcast clouds 
@@ -38,5 +38,6 @@
         <a href="https://github.com/vaneorozco08" target="_blank">Vanessa GO</a> is <a href="https://github.com/vaneorozco08/My-Weather-App" target="_blank">open-sourced on GitHub</a>
     </footer>
     </div>
+    <script src="src/index.js"></script>
 </body>
 </html>
