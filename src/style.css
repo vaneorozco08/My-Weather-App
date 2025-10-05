@@ -53,18 +53,17 @@ strong{
     
 }
 .weather-icon{
-    font-size: 38px;
-    padding: 4px;
-    line-height: 70px;
+    width: 88px;
+    height: 88px;
 }
 .weather-temperature{
     font-size: 78px;
     font-weight: bold;
-    line-height: 60px;
+    line-height: 80px;
 }
 .weather-celcius{
     font-size: 30px;
-    line-height: 30px;
+    line-height: 50px;
 }
 footer{
     font-size: 14px;
