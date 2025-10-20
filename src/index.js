@@ -53,28 +53,36 @@ function cityWeather(event) {
   
    searchCity(searchElement.value);
 }
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
 function getForecast(city){
     let apiKey = "a193eafba001c3fe70baa02c4to7f92d"
     let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(displayForecast);
 }
 function displayForecast(response){
-    let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
     let forecastHtml = "";
 
-days.forEach(function (day){
+    response.data.daily.forEach(function(day,index){
+        if(index < 5 ) {
     forecastHtml =
         forecastHtml +
         `
         <div class="weather-forescast-date">
-            <div class="weather-forecast-day">${day}</div> 
-            <div class="weather-forecast-icon">⛅</div> 
+            <div class="weather-forecast-day">${formatDay(day.time)}</div> 
+
+            <img src="${day.condition.icon_url}" class="weather-forecast-icon" /> 
             <div class="weather-forecast-temperature">
-                <div class="high-temp">19°</div> 
-                <div class="low-temp">15°</div>
+                <div class="high-temp">${Math.round(day.temperature.maximum)}º</div> 
+                <div class="low-temp">${Math.round(day.temperature.minimum)}º</div>
             </div>
         </div>    
         `;
+        }
 });
 
 let forecastElement = document.querySelector("#forecast");
@@ -84,5 +92,5 @@ forecastElement.innerHTML = forecastHtml;
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit",cityWeather);
 
-
+searchCity("Medellín");
 
