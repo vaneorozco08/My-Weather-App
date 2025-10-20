@@ -61,7 +61,7 @@ function getForecast(city){
 function displayForecast(response){
     let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
     let forecastHtml = "";
-}
+
 days.forEach(function (day){
     forecastHtml =
         forecastHtml +
@@ -79,6 +79,7 @@ days.forEach(function (day){
 
 let forecastElement = document.querySelector("#forecast");
 forecastElement.innerHTML = forecastHtml;
+}
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit",cityWeather);
